@@ -20,7 +20,8 @@ def build_filename(artists, title):
     for a in range(len(artists) - 1):
         artists_str += ", " + artists[a + 1]
     filename = artists_str + " - " + title
-    filename = filename.replace("/", "|")
+    filename = filename.replace("/", " ")
+    filename = filename.replace("?", "")
     return (filename, artists_str)
 
 def download_track(track):
